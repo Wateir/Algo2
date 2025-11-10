@@ -1,0 +1,9 @@
+(* shapes version: 6 *)
+tLa+V8V4LV8FAa<V6V0Aa<=c0V0LV6La-V0c1LV4FAa<V2V0Aa<=c0V0LV2La-V0c2INa>=c1V0LiaFalseaTruea>=c1V0F
+VC for fib_r
+ia=afib_rV0a+afib_ra-V0c1afib_ra-V0c2a=afib_rV0V0a>=c1V0F
+Na=V59c13Ia=V59V57Laref'mkV59FLV57Lafib_rc5Aa>=c5c1ANa=V55c7Ia=V55V53Laref'mkV55FLV53Lafib_rc4Aa>=c4c1ANa=V51c5Ia=V51V49Laref'mkV51FLV49Lafib_rc3Aa>=c3c1Aa=V47c3Ia=V47V45Laref'mkV47FLV45Lafib_rc4Aa>=c4c1Aa=V43c2Ia=V43V41Laref'mkV43FLV41Lafib_rc3Aa>=c3c1Aa=V39c1Ia=V39V37Laref'mkV39FLV37Lafib_rc2Aa>=c2c1Aa=V35c1Ia=V35V33Laref'mkV35FLV33Lafib_rc1Aa>=c1c1Aia=V75afib_rV61LV75a=V89afib_rV93Aa=V91afib_ra-V93c1Aa<=V93V61Aa<=c1V93Aa<a-V61V93a-V61V73Aa<=c0a-V61V73Ia=V93V85Laref'mkV93FIa=V91V75Laref'mkV91FIa=V89V87Laref'mkV89FLV87La+V75V74LV85La+V73c1a<=V73V81LiaFalseaTruea<=V73V81LV81La-V61c1Laref'mkV73LV62Ia=V75afib_rV73Aa=V74afib_ra-V73c1Aa<=V73V61Aa<=c1V73Laref'mkV73Laref'mkV74Laref'mkV75FAa=c1afib_rc1Aa=c0afib_ra-c1c1Aa<=c1V61Aa<=c1c1Laref'mkc1Laref'mkc1Lc1Laref'mkc0Laref'mkc0Lc0Laref'mkc1Laref'mkc1Lc1LV62Laref'mkV61Ia>=V61c1FANa=V31c13Ia=V31V29Laref'mkV31FLV29Lafib_rc5ANa=V27c7Ia=V27V25Laref'mkV27FLV25Lafib_rc4ANa=V23c5Ia=V23V21Laref'mkV23FLV21Lafib_rc3Aa=V19c3Ia=V19V17Laref'mkV19FLV17Lafib_rc4Aa=V15c2Ia=V15V13Laref'mk
+VC for main
+
+edbf44df97edb38aff519181beb1b9db 1H0
+507928369c52ec03f46b7ed654885c90 4H3H2

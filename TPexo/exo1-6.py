@@ -1,0 +1,22 @@
+#@function
+def fib(n:int)-> int:
+  #@variant n
+  return n if 1 >= n else fib(n-1)+fib(n-2)
+
+#@function
+def exp(n:int,expo:int)-> int:
+  #@requires expo>=0
+  #@variant expo
+  return 1 if expo == 0 else n*exp(n,expo-1)
+    
+#@function 
+def signe(n:int)-> int:
+  #@requires n>=1
+  #@variant n
+  return 1 if n == 1 else -1*signe(n-1)
+
+def ocagne(n:int):
+    #@requires n>=2
+    #@ensures exp(fib(n),2)-fib(n-1)*fib(n+1) == exp(-1,n+1)
+    if n>2:
+      ocagne(n-1)
