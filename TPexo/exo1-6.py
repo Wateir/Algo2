@@ -13,10 +13,12 @@ def exp(n:int,expo:int)-> int:
 def signe(n:int)-> int:
   #@requires n>=1
   #@variant n
-  return 1 if n == 1 else -1*signe(n-1)
+  return -1 if n == 1 else -1*signe(n-1)
 
 def ocagne(n:int):
     #@requires n>=2
-    #@ensures exp(fib(n),2)-fib(n-1)*fib(n+1) == exp(-1,n+1)
-    if n>2:
+    #@variant n
+    #@ensures (fib(n)*fib(n))-fib(n-1)*fib(n+1) == signe(n-1)
+    if n > 2:
       ocagne(n-1)
+

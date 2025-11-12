@@ -1,8 +1,8 @@
 #@ function abs(n:int) -> int = if n >= 0 then n else -n
 
 def abs_max(a:int, b:int, c:int) -> int:
-    #@ ensures result <= abs(a) and abs(result) <= abs(b) and abs(result) <= abs(c)
-    #@ ensures result == abs(a) or result == abs(b) or result == abs(c)
+    #@ ensures abs(result) >= abs(a) and abs(result) >= abs(b) and abs(result) >= abs(c)
+    #@ ensures result == a or result == b or result == c
     pass
 
 r = abs_max(5 ,8 ,2 )
@@ -21,4 +21,4 @@ r = abs_max(4 ,-10 ,8 )
 #@assert r !=8
 
 r = abs_max(7 ,-1 ,-9 )
-#@assert r!=9
+#@assert r !=9

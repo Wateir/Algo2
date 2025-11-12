@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
-"http://why3.lri.fr/why3session.dtd">
+"https://www.why3.org/why3session.dtd">
 <why3session shape_version="6">
 <prover id="0" name="Z3" version="4.13.4" timelimit="1" steplimit="0" memlimit="1000"/>
-<prover id="1" name="CVC4" version="1.8" timelimit="1" steplimit="0" memlimit="1000"/>
 <file format="python" proved="true">
 <path name=".."/><path name="exo1-5.py"/>
 <theory name="Exo1-5" proved="true">
  <goal name="fib_r&#39;vc" expl="VC for fib_r" proved="true">
- <proof prover="0" obsolete="true"><result status="valid" time="0.03" steps="58626"/></proof>
- <proof prover="1"><result status="valid" time="0.08" steps="22684"/></proof>
+ <proof prover="0"><result status="valid" time="0.026050" steps="58626"/></proof>
  </goal>
  <goal name="main&#39;vc" expl="VC for main" proved="true">
- <proof prover="0" obsolete="true"><result status="valid" time="0.02" steps="66906"/></proof>
- <proof prover="1"><result status="valid" time="0.10" steps="29746"/></proof>
+ <proof prover="0"><result status="valid" time="0.021824" steps="66906"/></proof>
  </goal>
 </theory>
 </file>
