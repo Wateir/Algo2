@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"https://www.why3.org/why3session.dtd">
+<why3session shape_version="6">
+<prover id="0" name="CVC4" version="1.8" timelimit="1" steplimit="0" memlimit="1000"/>
+<prover id="1" name="Z3" version="4.8.12" timelimit="1" steplimit="0" memlimit="4000"/>
+<file format="python">
+<path name=".."/><path name="exo1-8.py"/>
+<theory name="Exo1-8">
+ <goal name="main&#39;vc" expl="VC for main">
+ <proof prover="0" obsolete="true"><result status="unknown" time="0.088051" steps="29196"/></proof>
+ <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="13649542"/></proof>
+ <transf name="split_vc" >
+  <goal name="main&#39;vc.0" expl="check division by zero" proved="true">
+  <proof prover="0"><result status="valid" time="0.035020" steps="19025"/></proof>
+  </goal>
+  <goal name="main&#39;vc.1" expl="check division by zero" proved="true">
+  <proof prover="0"><result status="valid" time="0.046456" steps="19025"/></proof>
+  </goal>
+  <goal name="main&#39;vc.2" expl="postcondition">
+  <proof prover="0"><result status="unknown" time="0.109224" steps="31629"/></proof>
+  <proof prover="1" memlimit="1000"><result status="timeout" time="1.000000" steps="15748903"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.2.0" expl="postcondition">
+   <proof prover="0" timelimit="5" memlimit="2000"><result status="unknown" time="0.098801" steps="31503"/></proof>
+   <proof prover="1" timelimit="5" memlimit="2000"><result status="timeout" time="5.000000" steps="82891393"/></proof>
+   <transf name="inline_goal" >
+    <goal name="main&#39;vc.2.0.0" expl="postcondition">
+    <transf name="split_all_full" >
+     <goal name="main&#39;vc.2.0.0.0" expl="postcondition">
+     <proof prover="0" timelimit="30" memlimit="4000"><result status="unknown" time="0.100504" steps="35047"/></proof>
+     <proof prover="1" timelimit="30"><result status="timeout" time="30.000000" steps="669192828"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="main&#39;vc.2.1" expl="postcondition" proved="true">
+   <proof prover="0"><result status="valid" time="0.067005" steps="24337"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.3" expl="check division by zero" proved="true">
+  <proof prover="0"><result status="valid" time="0.035198" steps="19065"/></proof>
+  </goal>
+  <goal name="main&#39;vc.4" expl="check division by zero" proved="true">
+  <proof prover="0"><result status="valid" time="0.044092" steps="19065"/></proof>
+  </goal>
+  <goal name="main&#39;vc.5" expl="check division by zero" proved="true">
+  <proof prover="0"><result status="valid" time="0.080868" steps="19093"/></proof>
+  </goal>
+  <goal name="main&#39;vc.6" expl="precondition">
+  <proof prover="0" timelimit="5" memlimit="2000"><result status="unknown" time="0.097436" steps="30962"/></proof>
+  <proof prover="1" timelimit="5" memlimit="2000"><result status="timeout" time="5.000000" steps="2917031618"/></proof>
+  <transf name="inline_goal" >
+   <goal name="main&#39;vc.6.0" expl="precondition">
+   <transf name="split_all_full" >
+    <goal name="main&#39;vc.6.0.0" expl="precondition">
+    <proof prover="0" timelimit="30" memlimit="4000"><result status="unknown" time="0.110667" steps="35556"/></proof>
+    <proof prover="1" timelimit="30"><result status="timeout" time="30.000000" steps="9497789445"/></proof>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.7" expl="termination">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.124314" steps="36373"/></proof>
+  <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="14890017"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.7.0" expl="termination">
+   <proof prover="0" timelimit="5" memlimit="2000" obsolete="true"><result status="unknown" time="0.099139" steps="33781"/></proof>
+   <proof prover="1" timelimit="5" memlimit="2000" obsolete="true"><result status="timeout" time="5.000000" steps="1373302441"/></proof>
+   <transf name="inline_goal" >
+    <goal name="main&#39;vc.7.0.0" expl="termination">
+    <transf name="split_all_full" >
+     <goal name="main&#39;vc.7.0.0.0" expl="termination">
+     <proof prover="0" timelimit="30" memlimit="4000"><result status="unknown" time="0.116319" steps="34567"/></proof>
+     <proof prover="1" timelimit="30"><result status="timeout" time="30.000000" steps="9276470237"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.8" expl="postcondition">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.134342" steps="41000"/></proof>
+  <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="15268545"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.8.0" expl="postcondition" proved="true">
+   <proof prover="0" timelimit="5" memlimit="2000" obsolete="true"><result status="unknown" time="0.092843" steps="31616"/></proof>
+   <proof prover="1" timelimit="5" memlimit="2000" obsolete="true"><result status="timeout" time="5.000000" steps="74870181"/></proof>
+   <transf name="inline_goal" proved="true" >
+    <goal name="main&#39;vc.8.0.0" expl="postcondition" proved="true">
+    <transf name="split_all_full" proved="true" >
+     <goal name="main&#39;vc.8.0.0.0" expl="postcondition" proved="true">
+     <proof prover="0"><result status="valid" time="0.060596" steps="24552"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="main&#39;vc.8.1" expl="postcondition">
+   <proof prover="0" timelimit="30" memlimit="4000"><result status="unknown" time="0.101327" steps="31922"/></proof>
+   <proof prover="1" timelimit="30"><undone/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.9" expl="check division by zero" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="main&#39;vc.9.0" expl="check division by zero" proved="true">
+   <proof prover="0"><result status="valid" time="0.055165" steps="19097"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.10" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" time="0.035162" steps="22482"/></proof>
+  </goal>
+  <goal name="main&#39;vc.11" expl="termination">
+  <proof prover="0"><result status="unknown" time="0.084847" steps="37097"/></proof>
+  <proof prover="1" memlimit="1000"><result status="timeout" time="1.000000" steps="13890740"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.11.0" expl="termination">
+   <proof prover="0" timelimit="30" memlimit="4000"><result status="unknown" time="0.121343" steps="37089"/></proof>
+   <proof prover="1" timelimit="30"><result status="timeout" time="30.000000" steps="13744689504"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.12" expl="postcondition">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.132641" steps="35322"/></proof>
+  <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="17157050"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.12.0" expl="postcondition" proved="true">
+   <proof prover="0" timelimit="5" memlimit="2000" obsolete="true"><result status="unknown" time="0.112707" steps="35076"/></proof>
+   <proof prover="1" timelimit="5" memlimit="2000" obsolete="true"><result status="timeout" time="5.000000" steps="298562525"/></proof>
+   <transf name="inline_goal" proved="true" >
+    <goal name="main&#39;vc.12.0.0" expl="postcondition" proved="true">
+    <transf name="split_all_full" proved="true" >
+     <goal name="main&#39;vc.12.0.0.0" expl="postcondition" proved="true">
+     <proof prover="0"><result status="valid" time="0.069204" steps="24897"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="main&#39;vc.12.1" expl="postcondition">
+   <proof prover="0" timelimit="30" memlimit="4000"><result status="unknown" time="0.203446" steps="50788"/></proof>
+   <proof prover="1" timelimit="30"><undone/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.13" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" time="0.039064" steps="19005"/></proof>
+  </goal>
+  <goal name="main&#39;vc.14" expl="termination">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.084344" steps="29300"/></proof>
+  <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="15453108"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.14.0" expl="termination">
+   <proof prover="0" timelimit="30" memlimit="4000"><undone/></proof>
+   <proof prover="1" timelimit="30"><undone/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.15" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" time="0.086149" steps="25369"/></proof>
+  </goal>
+  <goal name="main&#39;vc.16" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" time="0.046951" steps="19089"/></proof>
+  </goal>
+  <goal name="main&#39;vc.17" expl="termination">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.094870" steps="29422"/></proof>
+  <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="15407947"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.17.0" expl="termination">
+   <proof prover="0" timelimit="30" memlimit="4000"><undone/></proof>
+   <proof prover="1" timelimit="30"><undone/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.18" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" time="0.103368" steps="32012"/></proof>
+  </goal>
+  <goal name="main&#39;vc.19" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" time="0.037443" steps="19191"/></proof>
+  </goal>
+  <goal name="main&#39;vc.20" expl="termination">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.092654" steps="29554"/></proof>
+  <proof prover="1" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="14610863"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.20.0" expl="termination">
+   <proof prover="0" timelimit="30" memlimit="4000"><undone/></proof>
+   <proof prover="1" timelimit="30"><undone/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.21" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" time="0.117430" steps="32960"/></proof>
+  </goal>
+  <goal name="main&#39;vc.22" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" time="0.035313" steps="19293"/></proof>
+  </goal>
+  <goal name="main&#39;vc.23" expl="termination">
+  <proof prover="0"><result status="unknown" time="0.089039" steps="29554"/></proof>
+  <proof prover="1" memlimit="1000"><result status="timeout" time="1.000000" steps="14586344"/></proof>
+  <transf name="split_vc" >
+   <goal name="main&#39;vc.23.0" expl="termination">
+   <proof prover="0" timelimit="30" memlimit="4000"><undone/></proof>
+   <proof prover="1" timelimit="30"><undone/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="main&#39;vc.24" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" time="0.108276" steps="34298"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

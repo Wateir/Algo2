@@ -1,0 +1,25 @@
+#@function
+def power(n:int,m:int)-> int:
+  #@requires m >= 0
+  #@variant m
+  return 1 if m == 0 else n*power(n,m-1)
+
+r = power(2,4)
+#@assert r == 16
+r = power(3,3)
+#@assert r == 27
+
+def expR(A:int, B:int)-> int:
+  #@requires B>=0
+  #@ensures result == power(A,B)
+  x,y = A,B
+  z = 1
+  while (y>0):
+    #@variant y
+    #@invariant z*power(x,y)==power(A,B)
+    #@invariant B>=y
+    if (y%2 == 0):
+      x,y = x, y//2
+    else:
+      z,y = x*x, y-1
+  return z
