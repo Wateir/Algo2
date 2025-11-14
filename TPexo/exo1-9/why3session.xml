@@ -2,102 +2,115 @@
 <!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
 "https://www.why3.org/why3session.dtd">
 <why3session shape_version="6">
-<prover id="0" name="Z3" version="4.8.12" timelimit="1" steplimit="0" memlimit="4000"/>
+<prover id="0" name="Z3" version="4.8.12" timelimit="1" steplimit="0" memlimit="1000"/>
 <prover id="1" name="CVC4" version="1.8" timelimit="1" steplimit="0" memlimit="1000"/>
-<file format="python">
+<file format="python" proved="true">
 <path name=".."/><path name="exo1-9.py"/>
 <theory name="Exo1-9">
- <goal name="power&#39;vc" expl="VC for power" proved="true">
- <proof prover="0" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="13827525"/></proof>
+ <goal name="power&#39;vc" expl="VC for power">
+ <proof prover="0" obsolete="true"><result status="timeout" time="1.000000" steps="13827525"/></proof>
  <proof prover="1" obsolete="true"><result status="unknown" time="0.089251" steps="29423"/></proof>
- <transf name="split_vc" proved="true" >
-  <goal name="power&#39;vc.0" expl="variant decrease" proved="true">
-  <proof prover="0" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="15631719"/></proof>
+ <transf name="split_vc" >
+  <goal name="power&#39;vc.0" expl="variant decrease">
+  <proof prover="0" obsolete="true"><result status="timeout" time="1.000000" steps="15631719"/></proof>
   <proof prover="1" obsolete="true"><result status="unknown" time="0.083364" steps="29293"/></proof>
-  <transf name="split_vc" proved="true" >
-   <goal name="power&#39;vc.0.0" expl="variant decrease" proved="true">
+  <transf name="split_vc" >
+   <goal name="power&#39;vc.0.0" expl="variant decrease">
    <proof prover="0" timelimit="5" memlimit="2000" obsolete="true"><result status="timeout" time="5.000000" steps="76622924"/></proof>
    <proof prover="1" timelimit="5" memlimit="2000" obsolete="true"><result status="unknown" time="0.080675" steps="29268"/></proof>
-   <transf name="inline_goal" proved="true" >
-    <goal name="power&#39;vc.0.0.0" expl="variant decrease" proved="true">
-    <transf name="split_all_full" proved="true" >
-     <goal name="power&#39;vc.0.0.0.0" expl="variant decrease" proved="true">
+   <transf name="inline_goal" >
+    <goal name="power&#39;vc.0.0.0" expl="variant decrease">
+    <transf name="split_all_full" >
+     <goal name="power&#39;vc.0.0.0.0" expl="variant decrease">
      <proof prover="1"><result status="valid" time="0.065160" steps="22467"/></proof>
      </goal>
     </transf>
     </goal>
    </transf>
    </goal>
-   <goal name="power&#39;vc.0.1" expl="variant decrease" proved="true">
+   <goal name="power&#39;vc.0.1" expl="variant decrease">
    <proof prover="1"><result status="valid" time="0.028220" steps="19045"/></proof>
    </goal>
   </transf>
   </goal>
-  <goal name="power&#39;vc.1" expl="precondition" proved="true">
+  <goal name="power&#39;vc.1" expl="precondition">
   <proof prover="1"><result status="valid" time="0.054820" steps="20303"/></proof>
   </goal>
  </transf>
  </goal>
  <goal name="main&#39;vc" expl="VC for main">
- <proof prover="0" memlimit="1000" obsolete="true"><result status="timeout" time="1.000000" steps="18170769"/></proof>
+ <proof prover="0" obsolete="true"><result status="timeout" time="1.000000" steps="18170769"/></proof>
  <proof prover="1" obsolete="true"><result status="unknown" time="0.091644" steps="30285"/></proof>
  <transf name="split_vc" >
-  <goal name="main&#39;vc.0" expl="precondition" proved="true">
+  <goal name="main&#39;vc.0" expl="precondition">
   <proof prover="1"><result status="valid" time="0.028815" steps="19003"/></proof>
   </goal>
-  <goal name="main&#39;vc.1" expl="assertion" proved="true">
+  <goal name="main&#39;vc.1" expl="assertion">
   <proof prover="0" timelimit="5" memlimit="2000" obsolete="true"><result status="timeout" time="5.000000" steps="92915041"/></proof>
   <proof prover="1" timelimit="5" memlimit="2000" obsolete="true"><result status="unknown" time="0.087034" steps="30285"/></proof>
-  <transf name="inline_goal" proved="true" >
-   <goal name="main&#39;vc.1.0" expl="assertion" proved="true">
-   <transf name="split_all_full" proved="true" >
-    <goal name="main&#39;vc.1.0.0" expl="assertion" proved="true">
+  <transf name="inline_goal" >
+   <goal name="main&#39;vc.1.0" expl="assertion">
+   <transf name="split_all_full" >
+    <goal name="main&#39;vc.1.0.0" expl="assertion">
     <proof prover="1"><result status="valid" time="0.076074" steps="26393"/></proof>
     </goal>
    </transf>
    </goal>
   </transf>
   </goal>
-  <goal name="main&#39;vc.2" expl="precondition" proved="true">
+  <goal name="main&#39;vc.2" expl="precondition">
   <proof prover="1"><result status="valid" time="0.036108" steps="19154"/></proof>
   </goal>
-  <goal name="main&#39;vc.3" expl="assertion" proved="true">
+  <goal name="main&#39;vc.3" expl="assertion">
   <proof prover="1"><result status="valid" time="0.076808" steps="24456"/></proof>
   </goal>
-  <goal name="main&#39;vc.4" expl="loop invariant init" proved="true">
+  <goal name="main&#39;vc.4" expl="loop invariant init">
   <proof prover="1"><result status="valid" time="0.044898" steps="19217"/></proof>
   </goal>
-  <goal name="main&#39;vc.5" expl="loop invariant init" proved="true">
+  <goal name="main&#39;vc.5" expl="loop invariant init">
   <proof prover="1"><result status="valid" time="0.047634" steps="19228"/></proof>
   </goal>
-  <goal name="main&#39;vc.6" expl="check division by zero" proved="true">
+  <goal name="main&#39;vc.6" expl="check division by zero">
   <proof prover="1"><result status="valid" time="0.043095" steps="19292"/></proof>
   </goal>
-  <goal name="main&#39;vc.7" expl="check division by zero" proved="true">
-  <proof prover="1"><result status="valid" time="0.030431" steps="19310"/></proof>
+  <goal name="main&#39;vc.7" expl="assertion">
+  <proof prover="0" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="655733679"/></proof>
+  <proof prover="1" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="5638392"/></proof>
   </goal>
-  <goal name="main&#39;vc.8" expl="loop variant decrease" proved="true">
-  <proof prover="1"><result status="valid" time="0.067281" steps="23011"/></proof>
+  <goal name="main&#39;vc.8" expl="check division by zero">
+  <proof prover="1"><result status="valid" time="0.067281" steps="19366"/></proof>
   </goal>
-  <goal name="main&#39;vc.9" expl="loop invariant preservation">
-  <proof prover="0" timelimit="30"><result status="timeout" time="30.000000" steps="63789407849"/></proof>
-  <proof prover="1" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="6331370"/></proof>
+  <goal name="main&#39;vc.9" expl="assertion">
+  <proof prover="1"><result status="valid" time="0.057907" steps="20672"/></proof>
   </goal>
-  <goal name="main&#39;vc.10" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.067246" steps="23080"/></proof>
+  <goal name="main&#39;vc.10" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.067246" steps="23152"/></proof>
   </goal>
-  <goal name="main&#39;vc.11" expl="loop variant decrease" proved="true">
-  <proof prover="1"><result status="valid" time="0.052097" steps="20750"/></proof>
+  <goal name="main&#39;vc.11" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.052097" steps="19424"/></proof>
   </goal>
   <goal name="main&#39;vc.12" expl="loop invariant preservation">
-  <proof prover="0" timelimit="30"><result status="timeout" time="30.000000" steps="60530837259"/></proof>
-  <proof prover="1" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="1899065"/></proof>
+  <proof prover="0" obsolete="true"><result status="valid" time="0.247950" steps="2929499"/></proof>
+  <proof prover="1"><result status="valid" time="0.073458" steps="23133"/></proof>
   </goal>
-  <goal name="main&#39;vc.13" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.051639" steps="20745"/></proof>
+  <goal name="main&#39;vc.13" expl="assertion">
+  <proof prover="0" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="1114976791"/></proof>
+  <proof prover="1" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="6183554"/></proof>
   </goal>
-  <goal name="main&#39;vc.14" expl="postcondition">
-  <proof prover="0" timelimit="30"><result status="timeout" time="30.000000" steps="631049057"/></proof>
+  <goal name="main&#39;vc.14" expl="assertion">
+  <proof prover="1"><result status="valid" time="0.041132" steps="20794"/></proof>
+  </goal>
+  <goal name="main&#39;vc.15" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.042277" steps="20872"/></proof>
+  </goal>
+  <goal name="main&#39;vc.16" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.024563" steps="19443"/></proof>
+  </goal>
+  <goal name="main&#39;vc.17" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.061797" steps="20815"/></proof>
+  </goal>
+  <goal name="main&#39;vc.18" expl="postcondition">
+  <proof prover="0" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="621339623"/></proof>
   <proof prover="1" timelimit="30" memlimit="4000"><result status="timeout" time="30.000000" steps="1104569"/></proof>
   </goal>
  </transf>
